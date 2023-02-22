@@ -1,0 +1,31 @@
+ALGORITHM project_algo
+VAR
+  Nbm_caracter,Nbm_words,nbm_vowels: INTEGER;
+  sentence: STRING;
+  caracter:CHAR ;
+
+BEGIN
+ Nbm_caracter :=0;
+ Nbm_words :=0;
+ nbm_vowels:=0;
+ caracter : =" ";
+
+  WRITE "Enter a sentence that ends with a period: "
+  READ sentence;
+
+  WHILE caracter <> '.' DO
+      IF (caracter= ' ' ) THEN
+          Nbm_words:= Nbm_words + 1;
+      END_IF
+      IF (caracter= 'a' ou caracter= 'e' ou caracter= 'i' ou caracter= 'o'ou caracter= 'u') THEN
+          nbm_vowels:= nbm_vowels + 1;
+      END_IF
+
+     caracter := caracter +1
+  END_WHILE
+
+  WRITE("Number of characters:" caracter) 
+  WRITE ("Number of words: " Nbm_words +1)
+  WRITE ("Number of vowels:"nbm_vowels)
+
+
